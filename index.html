@@ -1,7 +1,7 @@
 <!--
     Erica Goodman
     8766134
-    egoodman6134@conestogac.on.ca
+    egoodman6134@conestogac.on.ca 
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -9,51 +9,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Basic information about the artist M.C. Escher, including some images and a quote.">
-    <title>Assignment 1</title>
+    <title>Assignment 2 - Home</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
     <header class="formatting">
-        <h1>M. C. Escher</h1>
+        <h1>M. C. Escher - Home</h1>
     </header>
-
-    <main>
-        <section>
-            <h2>Biography</h2>
-            <!--Parargraph taken straight from Wikipedia, with a couple tweaks-->
-            <p>Maurits Cornelis Escher <i>(17 June 1898 – 27 March 1972)</i> was a Dutch graphic artist who made woodcuts, lithographs, and mezzotints, many of which were <b>inspired by mathematics</b>. 
-                Despite wide popular interest, Escher was neglected in the art world for most of his life, even in his native homeland of The Netherlands. 
-                He was 70 years old before a retrospective exhibition was held. 
-                In the late twentieth century, he became more widely appreciated, and in the twenty-first century, he has been <b>celebrated in exhibitions around the world</b>.</p>
-        </section>
-        <section>
-            <h2>Images</h2>
-            <figure>
-                <!--Absolute Reference-->
-                <img src="https://mcescher.com/wp-content/uploads/2019/04/MCEscher.png" class="mainimg" alt="A black and white photograph/headshot of Escher in his 70's.">
-                <figcaption>M.C. Escher in 1970</figcaption>
-            </figure>
-            <figure>
-                <!--Relative Reference-->
-                <img src="images/MC_Escher-Waterfall.jpg" class="mainimg" alt="A black-and-white perspective drawing of an infinite waterfall, using the 'impossible triangle' geometry."> <!--it would have been funny if I used his "Relativity" print for the relative image-->
-                <figcaption>M.C. Escher's "Waterfall". October 1961</figcaption>
-            </figure>
-        </section>
-        <section>
-            <h2>Quotes</h2>
-            <q cite="https://mcescher.com/about/quotes/">We adore chaos because we love to produce order.</q>
-        </section>
-    </main>
-
-    <aside>
-        <h2>Additional Information</h2>
+    <nav class="body-grid-item">
         <ul>
-            <li><a href="https://mcescher.com/" target="_blank">The Official M.C. Escher Website</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/M._C._Escher" target="_blank">Wikipedia</a></li>
-            <li><a href="https://www.theartstory.org/artist/escher-mc/" target="_blank">Timeline & More</a></li>
+            <li><a href="index.html" class="main_nav">Home</a></li>
+            <li>
+                <a>Media</a>
+                <!--sub pages-->
+                <ul>
+                    <li><a href="gallery.html">Gallery</li></a>
+                    <li><a href="video_player.html">Video</li></a>                     
+                </ul>
+            </li>
+            <li><a href="contact.html" class="main_nav">Contact</a></li>
         </ul>
-    </aside>
+    </nav>
+
+    <section class="align">
+        <main class="body-grid-item">
+            <section>
+                <h2>Biography</h2>
+                
+                <section class="main-grid-item" id="bio">
+                    <img src="images/MCE_Headshot.png" class="main-img" alt="A black and white photograph/headshot of Escher in his 70's." id="home_img">
+                
+                    <!--Parargraph taken straight from Wikipedia, with a couple tweaks-->
+                    <p id="para">Maurits Cornelis Escher <i>(17 June 1898 - 27 March 1972)</i> was a Dutch graphic artist who made woodcuts, lithographs, and mezzotints, many of which were <b>inspired by mathematics</b>. 
+                        Despite wide popular interest, Escher was neglected in the art world for most of his life, even in his native homeland of The Netherlands. 
+                        He was 70 years old before a retrospective exhibition was held. 
+                        In the late twentieth century, he became more widely appreciated, and in the twenty-first century, he has been <b>celebrated in exhibitions around the world</b>.
+                    </p>
+                    <p id ="para">His work features mathematical objects and operations including impossible objects, explorations of infinity, reflection, symmetry, perspective, truncated and stellated polyhedra, hyperbolic geometry, and tessellations. 
+                        Although Escher believed he had no mathematical ability, he interacted with the mathematicians George Pólya, Roger Penrose and Harold Coxeter and crystallographer Friedrich Haag, and conducted his own research into tessellation.
+                    </p>
+                </section>
+                
+            </section>
+            <br>
+            <!--Table with life details--> <!--data gathered from wikipedia: https://en.wikipedia.org/wiki/M._C._Escher-->
+            <section class="main-grid-item" id="table">
+                <h2>Places of Residence</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th colspan="2">City, Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1898</td>
+                            <td>Leeuwarden</td>
+                            <td>Netherlands</td>
+                        </tr>
+                        <tr>
+                            <td>1903</td>
+                            <td>Arnhem</td>
+                            <td>Netherlands</td>
+                        </tr>
+                        <tr>
+                            <td>1923</td>
+                            <td>Rome</td>
+                            <td>Italy</td>
+                        </tr>
+                        <tr>
+                            <td>1935</td>
+                            <td>Château-d'Œx</td>
+                            <td>Switzerland</td>
+                        </tr>
+                        <tr>
+                            <td>1937</td>
+                            <td>Brussels</td>
+                            <td>Belgium</td>
+                        </tr>
+                        <tr>
+                            <td>1941</td>
+                            <td>Baarn</td>
+                            <td>Netherlands</td>
+                        </tr>
+                        <tr>
+                            <td>1970</td>
+                            <td>Laren</td>
+                            <td>Netherlands</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <br>
+            <section class="main-grid-item X">
+                <h2>Quotes</h2>
+                <q cite="https://mcescher.com/about/quotes/">We adore chaos because we love to produce order.</q>
+            </section>
+            
+        </main>
+
+        <aside class="body-grid-item">
+            <h2>Additional Information</h2>
+            <ul>
+                <li><a href="https://mcescher.com/" target="_blank">The Official M.C. Escher Website</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/M._C._Escher" target="_blank">Wikipedia</a></li>
+                <li><a href="https://www.theartstory.org/artist/escher-mc/" target="_blank">Timeline & More</a></li>
+            </ul>
+        </aside>
+    </section>
 
     <footer class="formatting">
         <p>&copy Erica Goodman 2023</p>

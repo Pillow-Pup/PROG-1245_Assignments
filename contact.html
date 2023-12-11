@@ -1,0 +1,95 @@
+<!--
+    Erica Goodman
+    8766134
+    egoodman6134@conestogac.on.ca 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basic information about the artist M.C. Escher, including some images and a quote.">
+    <title>Assignment 2 - Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <header class="formatting">
+        <h1>Contact</h1>
+    </header>
+    <nav class="body-grid-item">
+        <ul>
+            <li><a href="index.html" class="main_nav">Home</a></li>
+            <li>
+                <a>Media</a>
+                <!--sub pages-->
+                <ul>
+                    <li><a href="gallery.html">Gallery</li></a>
+                    <li><a href="video_player.html">Video</li></a>                     
+                </ul>
+            </li>
+            <li><a href="contact.html" class="main_nav">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="align">
+        <main class="body-grid-item">
+            <h2>Contact Us</h2>
+            <form>
+                <br>
+                <label for="name_id" class="required">Name:</label>
+                <input type="text" id="name_id" name="name" required autofocus> <!--auto focus on this input-->
+        
+                <br>
+                <label for="email_id" class="required">Email:</label>
+                <input type="email" id="email_id" name="email" required>
+        
+                <br>
+                <label for="help_id" class="required">What do you need help with?</label>
+                <select id="help_id" name="help" required>
+                    <option value="0" selected>Select Option</option>
+                    <option value="exhibition">Schedule an Exhibition</option>
+                    <option value="web-issue">Website Issue</option> 
+                    <option value="other">Other</option>
+                </select>
+
+                <br>
+                <fieldset>
+                    <legend>If you selected "Schedule an Exhibition": </legend>
+                    <label for="date_id">Planned Exhibition Start Date:</label>
+                    <input type="date" id="date_id" name="date_name">
+
+                    <br>
+                    <br>
+                    <label for="location_id">Address:</label>
+                    <input type="text" id="location_id" name="location_name">
+                </fieldset>
+
+                <br>
+                <label for="comment_id" class="required">Comments:</label>
+                <br><textarea id="comment_id" name="comment" rows="5" required></textarea>
+            
+                <br>
+                <label for="human" class="required">I am a human</label>
+                <input type="checkbox" id="human" name="human" value="true" required>
+            
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+
+        <aside class="body-grid-item">
+            <h2>Additional Information</h2>
+            <ul>
+                <li><a href="https://mcescher.com/" target="_blank">The Official M.C. Escher Website</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/M._C._Escher" target="_blank">Wikipedia</a></li>
+                <li><a href="https://www.theartstory.org/artist/escher-mc/" target="_blank">Timeline & More</a></li>
+            </ul>
+        </aside>
+    </section>
+
+    <footer class="formatting">
+        <p>&copy Erica Goodman 2023</p>
+    </footer>
+</body>
+</html>

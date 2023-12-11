@@ -1,65 +1,300 @@
 /*
     Erica Goodman
     8766134
+    egoodman6134@conestogac.on.ca 
 */
-body{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
+/* Colour Theme:
+    H1, H2:                 rgb(89, 69, 52)
+    Redish-Brown:           rgb(124, 61, 61)
+    Gold:                   rgb(205, 171, 0)
+    Aside Links:            rgb(157, 66, 23)
+    Aside Hover             rgb(103, 27, 255)
+    Footer:                 rgb(49, 75, 81)
+    Nav Background:         rgb(242, 234, 185)
+
+
+    almost nav background:  rgb(159, 135, 118)
+    previous aside links:   rgb(230, 60, 0)
+*/ 
+
+html{
     font: normal normal normal 16px/1.5 serif;
-    padding: 10px;
+}
+
+header{
+    flex: 1 10%;
+    background-image: linear-gradient(135deg, #5ecdfa, #e77eff, #660bb0);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+main{
+    flex: 2 1 70%
+}
+aside{
+    flex: 1 2 30%;
+
+    background-image: url(../images/Swans_Pattern_0.jpg);
+    background-repeat: repeat;
+}
+footer{
+    flex: 1 5%;
+    background-image: linear-gradient(180deg, #000000, #a4a4a5, #ffffff, #810081);
+}
+footer p{
+    font-size: 11px;
+    color: rgb(37, 83, 93);
+    font-weight: bold; /*not necessary, but makes it look better*/
+}
+
+.body-grid-item{
+    padding: 0.5rem;
+    margin: 0.8rem;
+}
+.main-grid-item{
+    overflow : auto;
 }
 .formatting{
     border: 4px solid rgb(205, 171, 0);
     border-radius: 18px;
-    padding: 25px;
-    margin: 15px;
+    padding: 1.6rem;
+    margin: 0.8rem;
 }
-h1, h2{
-    color: rgb(96, 70, 60);
-    font-variant: small-caps;
 
+h1, h2{
+    color: rgb(89, 69, 52);
+    font-variant: small-caps;
+    font-size: 2rem;
 }
-footer p{
-    font-size: 11px;
-    color: rgb(49, 75, 81);
-    /*font-weight: bold; /*not necessary, but makes it look better*/
+h2{
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
 }
-main{
-float: left;
-width: 60%;
-padding: 10px;
-margin: 10px;
+
+
+/* the following 2 element styles ("nav" and "nav a") have been borrowed from your in-class example about menus, and adjusted to match my website*/
+nav{ 
+    margin: 0.4rem;
+    border: 4px solid rgb(205, 171, 0);
+    border-radius:18px;
+    padding: 20px 0; 
+    text-align: center;
+
+    flex: 1 5%;
 }
-aside{
-float: right;
-width: 30%;
-padding: 10px;
-margin: 10px;
+nav a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none; /*removes underline*/
+    padding: 0 30px;
+    /* I added boxes around the nav buttons, similar to the in-class tasks, to make it more obvious when you are hovering over them.
+    I hope this is okay */
+    border: 2px solid rgb(124, 61, 61);
+    color: rgb(124, 61, 61);
+    background-color: rgb(242, 234, 185);
 }
-footer{
-    clear: both;
+
+
+.main_nav:hover{
+    background-color: rgb(205, 171, 0);
 }
-.mainimg{
-    border: 12px groove rgb(124, 61, 61);
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
+nav>ul>li{ 
+    display: inline-block;
+    position: relative;
+}
+nav ul li ul { 
+    display: none; /*hide the sub menu by default*/
+}
+nav ul li:hover ul{
+    display: block;
+}
+nav ul li ul {
+	width: 120%; 
+	position: absolute; 
+	z-index: 999; /* make sure the sub menu is not hidden behind other elements */
+	text-align: left;
+    box-shadow: 0 0 5px rgb(89, 69, 52); /*add a  shadow to the sub menu*/
+    
+}
+nav ul li ul li a{
+    padding: 0.05rem 0.5rem;
+    display: block;
+}
+nav ul li ul li:hover a:hover{
+    background-color: rgb(205, 171, 0); 
+}
+
 figcaption{
     font-weight: bold;
     font-variant: small-caps;
+    text-align: center;
 }
+
 q{
-    font-family: cursive; /*gross comic sans font, but whatever. A caligraphy-style font would look better*/
+    font-family: Brush Script MT, Brush Script Std, cursive; /*I couldn't bear the Comic-Sans font any more, sorry*/
     font-style: italic;
-    font-size: 18px;
+    font-size: 2rem;
 }
-ul li{
+aside ul li{
     list-style-type: none;
     line-height: 3;
 }
-li > a{ /*assignment steps said to use "ul > a{...}", to remove underline, but that doesn't actually change anything*/
+aside li > a{ /*assignment steps said to use "ul > a{...}", to remove underline, but that doesn't actually change anything*/
     text-decoration: none;
-    color: rgb(230, 60, 0);
+    color:rgb(134, 51, 13);
+    font-weight: bold;
 }
-a:hover{
-    color: rgb(103, 27, 255);
+aside a:hover{
+    color: rgb(77, 33, 234);
+}
+
+
+/* The following Form stylings were copied & modified from my in-class task #5 & from the in-class demo about forms*/
+.required:before{
+    content: "* ";
+    color: rgb(230, 0, 0);
+}
+input[type=text], input[type=email], input[type=submit], select, option{
+    width: 50%;
+    display: block;
+    height: 2rem;
+}
+label, legend, input[type=submit]{
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: rgb(89, 69, 52);
+}
+legend{
+    font-weight: normal;
+}
+select, option{
+    font-variant: small-caps;
+    font-size: 1.2rem;
+    
+}
+textarea{
+    width: 60%;
+    display: block;
+}
+input[type=submit]{
+    padding: 0.05rem;
+    margin: 0.5rem;
+    border: 2px solid rgb(124, 61, 61);
+    background-color: rgb(205, 171, 0);
+    font-size: 1.6rem;
+    font-weight: bolder;
+    height: 3rem;
+    border-radius: 30px;
+}
+input[type=text]:focus, input[type=email]:focus, input[type=date]:focus{
+    background-color: rgb(242, 234, 185);
+}
+
+
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+table{
+    border-collapse: collapse; /*remove the padding between cell borders*/
+    min-width: 40%;
+}
+thead{
+    background-color: rgb(242, 234, 185);
+}
+table, tr, td, th{
+    border: 0.1rem solid rgb(124, 61, 61);
+}
+td, th{
+    padding: 0.5rem;
+}
+
+.align{ /*used to put the aside to the right of main*/
+    display: flex;
+    flex-direction: row;
+    flex: 4 8%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#home_img{
+    float: left;
+    width: 18%;
+    height: 18%;
+    clip-path: circle(40%);
+    shape-outside: circle(40%);
+    shape-margin: 0.7rem;
+}
+
+/*
+    Clip Path for all the Gallery images
+    the corners are cut off, except for the corner with the signature/logo/year 
+*/
+#img-1{
+    clip-path: polygon(0 15%, 15% 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
+}
+#img-2{
+    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0 85%);
+}
+#img-3{
+    clip-path: polygon(0 15%, 15% 0, 100% 0, 100% 85%, 85% 100%, 15% 100%, 0 85%);
+}
+#img-4{
+    clip-path: polygon(0 15%, 15% 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
+}
+#img-5{
+    clip-path: ellipse(42.85% 89.42% at 50% 100%);
+}
+#img-6{
+    clip-path: polygon(0 15%, 15% 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
+}
+#img-7{
+    clip-path: polygon(0 15%, 15% 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 0 100%);
+}
+#img-8{
+    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0 85%);
+}
+#img-9{
+    clip-path: polygon(0 15%, 15% 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
+}
+
+@media(max-width: 1200px){
+    html{
+        font-size: 12px;
+    }
+    aside{
+        background-image: url(../images/Swans_Pattern_1.jpg);
+    }
+    #gallery{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+@media(max-width: 600px){
+    html{
+        font-size: 9px;
+    }
+    aside{
+        background-image: url(../images/Crab_Pattern_2.jpg);
+    }
+    #gallery{
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr;
+    }
 }
